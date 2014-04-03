@@ -1,0 +1,47 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Photo_Mixer.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="PHOTO MIXER" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="About" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock Text="This application allows you to Mix two different photos in one. This means that you can cut something from one photo and paste it on other one. To get started with this, you must first open an image from the Photos gallery by tapping on the open icon in the application bar in this application."
+                               TextWrapping="Wrap" Margin="12,0,12,12"/>
+                    <Image Source="/Assets/1.png" Margin="12,24"/>
+                    <TextBlock Text="First step is to mark the image foreground and background areas by drawing annotations on the image using two different colors. Notice that it is not necessary to paint the whole areas, but only to give hints to the interactive foreground segmenter. Based on your annotations, the preview is automatically updated to show the generated foreground/background segmentation."
+                               TextWrapping="Wrap" Margin="12,0,12,12"/>
+
+                    <Image Source="/Assets/2.png" Margin="12,24"/>
+                    <TextBlock Text="Next step is choose another image that will be the background. The application will add to each other the pictures, and add a slight Lens blur. When you're happy with the result, you can save it to the Saved Photos album in the Photos gallery."
+                               TextWrapping="Wrap" Margin="12,0,12,24"/>
+                    <TextBlock Text="Every time you backed, you will need to select the background again"
+                               TextWrapping="Wrap" Margin="12,0,12,24"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
