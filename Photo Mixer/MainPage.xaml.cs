@@ -125,6 +125,7 @@ namespace Photo_Mixer
             _task2.Completed += PhotoChooserTask_Completed2;
 
             OriginalImage.LayoutUpdated += OriginalImage_LayoutUpdated;
+            GoogleAnalytics.EasyTracker.GetTracker().SendView("MainPage");
         }
 
         private void CreateButtons()

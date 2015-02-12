@@ -53,7 +53,7 @@ namespace Photo_Mixer
             InitializeComponent();
 
             CreateButtons();
-
+            GoogleAnalytics.EasyTracker.GetTracker().SendView("ResultPage");
         }
        
         private void CreateButtons()
