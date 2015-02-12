@@ -5,6 +5,10 @@
     <IconPath IsRelative="true" IsResource="false">PM-300.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />

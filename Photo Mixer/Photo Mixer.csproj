@@ -180,6 +180,8 @@
     <Content Include="Assets\Tiles\PM-Wide.png" />
     <Content Include="Assets\Tiles\PM2-Medium.png" />
     <Content Include="Assets\Tiles\PM2-Wide.png" />
+    <Content Include="Lib\GoogleAds.dll" />
+    <Content Include="Lib\GoogleAds.XML" />
     <Content Include="PM-300.png" />
     <Content Include="PM-Medium.png" />
     <Content Include="PM-Small.png" />
@@ -198,6 +200,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="GoogleAds, Version=6.5.13.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>

@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:googleAds="clr-namespace:GoogleAds;assembly=GoogleAds"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -41,8 +42,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
+        <googleAds:AdView Grid.Row="2" Name="TopBanner" AdUnitID="ca-app-pub-1938975042085430/7708223432" Format="Banner" />
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"
