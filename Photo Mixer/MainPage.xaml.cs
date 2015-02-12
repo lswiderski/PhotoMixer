@@ -83,9 +83,9 @@ namespace Photo_Mixer
         {
             EmailComposeTask emailComposeTask = new EmailComposeTask();
 
-            emailComposeTask.Subject = "Photo Mixerfeedback";
+            emailComposeTask.Subject = "Photo Mixer feedback";
             emailComposeTask.Body = "Feedback";
-            emailComposeTask.To = "l.swiderski@outlook.com";
+            emailComposeTask.To = "neufrin.feedback@outlook.com";
 
             emailComposeTask.Show();
         }
