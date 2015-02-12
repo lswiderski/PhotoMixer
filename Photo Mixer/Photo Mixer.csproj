@@ -130,6 +130,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="analytics.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Help\Nokia Imaging SDK.chm" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
@@ -138,6 +141,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="analytics.xml" />
     <Content Include="Assets\1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -201,6 +205,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GoogleAds, Version=6.5.13.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GoogleAnalytics">
+      <HintPath>..\packages\GoogleAnalyticsSDK.1.2.12\lib\windowsphone8\GoogleAnalytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GoogleAnalytics.Core">
+      <HintPath>..\packages\GoogleAnalyticsSDK.1.2.12\lib\windowsphone8\GoogleAnalytics.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
@@ -212,6 +223,15 @@
     </Reference>
     <Reference Include="Nokia.InteropServices.WindowsRuntime">
       <HintPath>..\packages\NokiaImagingSDK.1.1.177\lib\wp8\ARM\Nokia.InteropServices.WindowsRuntime.winmd</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.1.10\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -228,4 +248,9 @@
   -->
   <ProjectExtensions />
   <Import Project="..\packages\NokiaImagingSDK.1.1.177\build\wp8\NokiaImagingSDK.targets" Condition="Exists('..\packages\NokiaImagingSDK.1.1.177\build\wp8\NokiaImagingSDK.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
 </Project>
